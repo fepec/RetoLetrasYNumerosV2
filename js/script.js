@@ -23,34 +23,14 @@ let letras = "";
 let numeros = "";
 
 function pongaLetraNumero(boton) {
-  
   if (letras.length != 10) {
-    if (boton == 1 && boton == letras.length + 1) {
-      letras = letras + "A";
-    } else if (boton == 2 && boton == letras.length + 1) {
-      letras = letras + "B";
-    } else if (boton == 3 && boton == letras.length + 1) {
-      letras = letras + "C";
-    } else if (boton == 4 && boton == letras.length + 1) {
-      letras = letras + "D";
-    } else if (boton == 5 && boton == letras.length + 1) {
-      letras = letras + "E";
-    } else if (boton == 6 && boton == letras.length + 1) {
-      letras = letras + "F";
-    } else if (boton == 7 && boton == letras.length + 1) {
-      letras = letras + "G";
-    } else if (boton == 8 && boton == letras.length + 1) {
-      letras = letras + "H";
-    } else if (boton == 9 && boton == letras.length + 1) {
-      letras = letras + "I";
-    } else if (boton == 10 && boton == letras.length + 1) {
-      letras = letras + "J";
+    if () {
+      // Aqui toca optimizar la lógica. 
     } else {
       divAlerta.innerHTML = "Letra incorrecta.";
       setTimeout(() => {
         divAlerta.innerHTML = "";
       }, 3000);
-      
     }
   } else {
     if (boton == 1 && boton == numeros.length + 1) {
@@ -78,15 +58,15 @@ function pongaLetraNumero(boton) {
       setTimeout(() => {
         divAlerta.innerHTML = "";
       }, 3000);
-      
     }
   }
 
   letrasHTML.innerHTML = letras;
   numerosHTML.innerHTML = numeros;
-  
-  letrasInput.innerHTML = letras;
-  numerosInput.innerHTML = numeros;
+
+  letrasInput.value = letras;
+  numerosInput.value = numeros;
+  console.log(letrasInput.value.length);
 }
 
 btnA1.onclick = function () {
@@ -123,9 +103,11 @@ btnJ0.onclick = function () {
 btnCL.onclick = function () {
   letras = "";
   letrasHTML.innerHTML = "";
+  letrasInput.value = "";
 };
 
 btnCN.onclick = function () {
   numeros = "";
   numerosHTML.innerHTML = "";
+  numerosInput.value = "";
 };
