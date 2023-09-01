@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
     text-align: center;
     background-color: #000;
@@ -14,21 +22,34 @@ h2 {
     display:inline-block;   
 }
 
-button {
-  width: 60px;
-  margin: 5px;
+.button-box {
+  display: grid;
+  width: 40%;
+  margin: 0 auto;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+button {  
+  /* Font settings */
+  font-family:'Courier New', Courier, monospace;    
+  font-size: 2rem;
   text-align: center;
+  color: white;
+
+  /* Button positioning settings */
+  margin: 10px;
+  align-self: stretch;
+  
+  /* Button aesthetics and animations*/
   background-color:royalblue;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px 5px yellow;
-  font-family:'Courier New', Courier, monospace;    
-  color: white;
-  transition: color 500ms ease, background-color 500ms ease;
+  box-shadow: 0px 0px 10px 5px yellow; 
+  transition: color 300ms ease, background-color 500ms ease;
 }
 
 button:hover{
-
-    background-color:indigo;
+  background-color:indigo;
   }
 
 #letrasHTML {
