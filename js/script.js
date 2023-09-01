@@ -14,6 +14,11 @@ const btnCN = document.getElementById("btnCN");
 const letrasHTML = document.getElementById("letrasHTML");
 const numerosHTML = document.getElementById("numerosHTML");
 
+const letrasInput = document.getElementById("letrasInput");
+const numerosInput = document.getElementById("numerosInput");
+
+const divAlerta = document.getElementById("alerta");
+
 let letras = "";
 let numeros = "";
 
@@ -42,7 +47,8 @@ function pongaLetraNumero(boton) {
     } else if (boton == 10 && boton == letras.length + 1) {
       letras = letras + "J";
     } else {
-      alert("Letra incorrecta.");
+      divAlerta.innerHTML = "Letra incorrecta.";
+      
     }
   } else {
     if (boton == 1 && boton == numeros.length + 1) {
@@ -66,12 +72,15 @@ function pongaLetraNumero(boton) {
     } else if (boton == 10 && boton == numeros.length + 1) {
       numeros = numeros + "0";
     } else {
-      alert("Numero incorrecto.");
+      divAlerta.innerHTML = "Número incorrecto.";
     }
   }
 
   letrasHTML.innerHTML = letras;
   numerosHTML.innerHTML = numeros;
+  
+  letrasInput.innerHTML = letras;
+  numerosInput.innerHTML = numeros;
 }
 
 btnA1.onclick = function () {
