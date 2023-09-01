@@ -61,3 +61,8 @@ button:hover{
   font-size: 20px;
   color: #0000ff;
 }
+
+.alerta {
+  font-size: 3rem;
+  color: red;
+}
