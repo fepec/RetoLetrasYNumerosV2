@@ -23,8 +23,7 @@ let letras = "";
 let numeros = "";
 
 function pongaLetraNumero(boton) {
-  // alert("presionaste el botón:" + boton)
-
+  
   if (letras.length != 10) {
     if (boton == 1 && boton == letras.length + 1) {
       letras = letras + "A";
@@ -48,6 +47,9 @@ function pongaLetraNumero(boton) {
       letras = letras + "J";
     } else {
       divAlerta.innerHTML = "Letra incorrecta.";
+      setTimeout(() => {
+        divAlerta.innerHTML = "";
+      }, 3000);
       
     }
   } else {
@@ -73,6 +75,10 @@ function pongaLetraNumero(boton) {
       numeros = numeros + "0";
     } else {
       divAlerta.innerHTML = "Número incorrecto.";
+      setTimeout(() => {
+        divAlerta.innerHTML = "";
+      }, 3000);
+      
     }
   }
 
